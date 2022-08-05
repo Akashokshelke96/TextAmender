@@ -10,7 +10,7 @@ import TextForm from './Components/TextForm';
 
 function App() {
 
-  const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
+  const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not use state
 
   const [alert, setAlert] = useState(null)
 
@@ -25,11 +25,11 @@ function App() {
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = 'grey';
-      showAlert("Dark mode has been unabled","success")
+      showAlert("Dark mode has been enabled","success")
     }
     else{
       setMode('light');
-      showAlert("Light mode has been unabled","success")
+      showAlert("Light mode has been enabled","success")
 
     }
   }
@@ -41,7 +41,7 @@ function App() {
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert} />
     <div className="container my-3">
-    <TextForm heading="Enter the text to analyze below" mode={mode}/>
+    <TextForm heading="Enter the text to Modify" mode={mode}/>
     </div>
   </>
 
